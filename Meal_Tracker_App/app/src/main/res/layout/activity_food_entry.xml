@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FoodEntryActivity">
+
+    <TextView
+        android:id="@+id/txtFoodEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Food Entry"
+        android:textColor="@color/orange_pastel"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEntryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFoodEntry"
+        app:layout_constraintStart_toEndOf="@+id/txtFoodEntry"
+        app:layout_constraintTop_toTopOf="@+id/txtFoodEntry" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFoodEntry"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/txtFoodEntry"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="@+id/etxtTime"
+        app:layout_constraintStart_toStartOf="@+id/etxtTime"
+        app:layout_constraintTop_toBottomOf="@+id/txtFoodEntry" />
+
+    <EditText
+        android:id="@+id/etxtTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="time"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerMeal"
+        app:layout_constraintEnd_toEndOf="@+id/txtFoodEntry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtFoodEntry"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime" />
+
+    <ImageView
+        android:id="@+id/btnClock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtTime"
+        app:layout_constraintStart_toEndOf="@+id/etxtTime"
+        app:layout_constraintTop_toTopOf="@+id/etxtTime"
+        app:srcCompat="@drawable/ic_baseline_access_time_24" />
+
+    <TextView
+        android:id="@+id/txtMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTime"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerMeal"
+        app:layout_constraintStart_toStartOf="@+id/spinnerMeal" />
+
+    <Spinner
+        android:id="@+id/spinnerMeal"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeal" />
+
+    <TextView
+        android:id="@+id/txtEntries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Entries"
+        app:layout_constraintStart_toStartOf="@+id/txtFoodEntry"
+        app:layout_constraintTop_toBottomOf="@+id/etxtTime" />
+
+    <AutoCompleteTextView
+        android:id="@+id/actvFoodName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:completionThreshold="3"
+        android:ems="10"
+        android:hint="Select food or input manually"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/txtEntries"
+        app:layout_constraintTop_toBottomOf="@+id/txtEntries" />
+
+    <EditText
+        android:id="@+id/editTextQuantity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Qty"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/actvFoodName"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/actvFoodName"
+        app:layout_constraintTop_toTopOf="@+id/actvFoodName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etxtFoodCalories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:hint="kCal"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/actvFoodName"
+        app:layout_constraintTop_toBottomOf="@+id/actvFoodName" />
+
+    <EditText
+        android:id="@+id/etxtFoodCarbs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:hint="g"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxtFoodProtein"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/etxtFoodCalories" />
+
+    <EditText
+        android:id="@+id/etxtFoodProtein"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:hint="g"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/etxtFoodFat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etxtFoodCarbs"
+        app:layout_constraintTop_toTopOf="@+id/etxtFoodCarbs" />
+
+    <EditText
+        android:id="@+id/etxtFoodFat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="bottom|center"
+        android:hint="g"
+        android:inputType="number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etxtFoodProtein"
+        app:layout_constraintTop_toTopOf="@+id/etxtFoodProtein" />
+
+    <TextView
+        android:id="@+id/txtFoodExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="(input grams only if using autocompletion; 100g by default)"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEntries"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/txtEntries" />
+
+    <ImageView
+        android:id="@+id/btnAddNewLine"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtFoodFat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/etxtFoodFat"
+        app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
+    <ListView
+        android:id="@+id/lvEntryFoodlogs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+    </ListView>
+
+    <Button
+        android:id="@+id/btnAddFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/orange_pastel"
+        android:fontFamily="sans-serif-light"
+        android:text="Add"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvEntryFoodlogs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8442822" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/tvGram"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="g"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextQuantity"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/editTextQuantity"
+        app:layout_constraintTop_toTopOf="@+id/editTextQuantity" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calories"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/etxtFoodCalories"
+        app:layout_constraintStart_toStartOf="@+id/etxtFoodCalories"
+        app:layout_constraintTop_toBottomOf="@+id/etxtFoodCalories" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="carbs"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/etxtFoodCarbs"
+        app:layout_constraintStart_toStartOf="@+id/etxtFoodCarbs"
+        app:layout_constraintTop_toBottomOf="@+id/etxtFoodCarbs" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="protein"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/etxtFoodProtein"
+        app:layout_constraintStart_toEndOf="@+id/etxtFoodCarbs"
+        app:layout_constraintTop_toBottomOf="@+id/etxtFoodProtein" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fat"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/etxtFoodFat"
+        app:layout_constraintStart_toStartOf="@+id/etxtFoodFat"
+        app:layout_constraintTop_toBottomOf="@+id/etxtFoodFat" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="New entries pending"
+        android:textColor="@color/orange_pastel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

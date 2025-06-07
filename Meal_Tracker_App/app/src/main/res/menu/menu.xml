@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuItemSetup"
+        android:title="Profile &amp; Goal Setup" />
+    <item
+        android:id="@+id/menuItemStats"
+        android:title="Statistics" />
+
+    <item
+        android:id="@+id/menuItemAbout"
+        android:title="About" />
+
+</menu>

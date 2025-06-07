@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SetupActivity">
+
+
+    <TextView
+        android:id="@+id/txtSetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Setup"
+        android:textColor="@color/orange_pastel"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDateForSetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSetup"
+        app:layout_constraintStart_toEndOf="@+id/txtSetup"
+        app:layout_constraintTop_toTopOf="@+id/txtSetup" />
+
+    <TextView
+        android:id="@+id/textfirstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="First name"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetFirstname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetFirstname" />
+
+    <TextView
+        android:id="@+id/textlastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last name"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetLastname"
+        app:layout_constraintStart_toStartOf="@+id/textfirstname"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetLastname" />
+
+    <TextView
+        android:id="@+id/textBirthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthdate"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBirthdate"
+        app:layout_constraintStart_toStartOf="@+id/textlastname"
+        app:layout_constraintTop_toTopOf="@+id/txtBirthdate" />
+
+    <TextView
+        android:id="@+id/textHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetHeight"
+        app:layout_constraintStart_toStartOf="@+id/textBirthdate"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetHeight" />
+
+    <TextView
+        android:id="@+id/textweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetWeightValue"
+        app:layout_constraintStart_toStartOf="@+id/textHeight"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetWeightValue" />
+
+    <TextView
+        android:id="@+id/textDailycaloricgoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily caloric goal"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetCaloricValue"
+        app:layout_constraintStart_toStartOf="@+id/textweight"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetCaloricValue" />
+
+    <TextView
+        android:id="@+id/textMacrogoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Macronutrient goals\n(% of calories)"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetCarbs"
+        app:layout_constraintStart_toStartOf="@+id/textwaterdrinkinggoal"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetCarbs" />
+
+    <TextView
+        android:id="@+id/textwaterdrinkinggoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water drinking goal"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtSetWater"
+        app:layout_constraintStart_toStartOf="@+id/textDailycaloricgoal"
+        app:layout_constraintTop_toTopOf="@+id/etxtSetWater" />
+
+    <EditText
+        android:id="@+id/etxtSetFirstname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+    <EditText
+        android:id="@+id/etxtSetLastname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBirthdateCalendar"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/etxtSetFirstname" />
+
+    <TextView
+        android:id="@+id/txtBirthdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Select birth date"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBirthdateCalendar"
+        app:layout_constraintEnd_toStartOf="@+id/btnBirthdateCalendar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etxtSetLastname"
+        app:layout_constraintTop_toTopOf="@+id/btnBirthdateCalendar" />
+
+    <ImageView
+        android:id="@+id/btnBirthdateCalendar"
+        android:layout_width="30dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintBottom_toTopOf="@+id/etxtSetHeight"
+        app:layout_constraintEnd_toEndOf="@+id/etxtSetLastname"
+        app:layout_constraintTop_toBottomOf="@+id/etxtSetLastname" />
+
+    <EditText
+        android:id="@+id/etxtSetHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="cm"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/etxtSetWeightValue"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/btnBirthdateCalendar" />
+
+    <EditText
+        android:id="@+id/etxtSetWeightValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="kg"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/etxtSetCaloricValue"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/etxtSetHeight" />
+
+    <EditText
+        android:id="@+id/etxtSetCaloricValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="kcal"
+        android:inputType="number"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/etxtSetCarbs"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/etxtSetWeightValue" />
+
+    <EditText
+        android:id="@+id/etxtSetCarbs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="carbs"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/etxtSetWater"
+        app:layout_constraintEnd_toStartOf="@+id/etxtSetProtein"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/etxtSetCaloricValue" />
+
+    <EditText
+        android:id="@+id/etxtSetProtein"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="protein"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etxtSetCarbs"
+        app:layout_constraintEnd_toStartOf="@+id/etxtSetFat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etxtSetCarbs" />
+
+    <EditText
+        android:id="@+id/etxtSetFat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="fat"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etxtSetProtein"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etxtSetProtein" />
+
+    <EditText
+        android:id="@+id/etxtSetWater"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="number of glasses"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline8" />
+
+    <Button
+        android:id="@+id/btnSaveSetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="@color/orange_pastel"
+        android:fontFamily="sans-serif-light"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="false"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBottom" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="197dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
