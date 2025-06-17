@@ -59,7 +59,7 @@ The app uses the `foodnutrients.csv` file, which contains:
 
 1. **Clone the repo:**
     ```bash
-    git clone https://github.com/yourusername/meal-tracker-app.git
+    git clone https://github.com/Anshul-ydv/meal-tracker-app.git
     cd meal-tracker-app
     ```
 
